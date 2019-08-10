@@ -9,7 +9,7 @@ public class IsUnique {
         HashMap<Character, Integer> hm = new HashMap<>();
         char[] strArray=str.toCharArray();
 
-        for(char c: strArray)
+        for(char c: strArray) //counting frequency of characters in the string
         {
           if(hm.containsKey(c))
               hm.put(c,hm.get(c)+1);
@@ -17,7 +17,7 @@ public class IsUnique {
               hm.put(c,1);
         }
 
-        for(HashMap.Entry mapElement : hm.entrySet())
+        for(HashMap.Entry mapElement : hm.entrySet()) // checking whether the characters are unique or not
         {
             int count=(int)mapElement.getValue();
             if(count>1)

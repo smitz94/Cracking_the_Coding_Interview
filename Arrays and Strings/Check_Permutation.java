@@ -6,8 +6,9 @@ public class Check_Permutation {
 
     public static boolean is_Permutation(String strA,String strB)
     {
-        if(strA.length()!=strB.length())
+        if(strA.length()!=strB.length()) {
             return false;
+        }
 
         int[] characters=  new int[128];
 
@@ -24,21 +25,24 @@ public class Check_Permutation {
         {
             int j= (int) strB.charAt(i); //converting character to ASCII value
             characters[j]--;
-            if(characters[j]<0)
+            if(characters[j]<0) {
                 return false;
+            }
         }
 
         return true;
     }
 
     public static void main(String[] args) {
-        String strA = new String();
-        String strB = new String();
+        String strA = "";
+        String strB = "";
         Scanner sc =new Scanner(System.in);
+
         System.out.print("String A: ");
-        sc.next();
+        strA= sc.nextLine();
+
         System.out.print("String B: ");
-        sc.next();
+        strB= sc.nextLine();
 
         boolean flag = is_Permutation(strA,strB);
 
